@@ -3,6 +3,8 @@ class Solution(object):
         """
         :type digits: str
         :rtype: List[str]
+        使用字典来进行初始化值，res来作为保存数组。
+        backtrack递归函数，当next_num为空结束，把conn加进res中。不为空时，字符串拼接和取next_num之后的数作为参数传入backtrack中。
         """
         dict1 = {
             '2':['a','b','c'],
@@ -38,5 +40,8 @@ class Solution(object):
             backtrack('', digits)
         return res
 
+'''
+测试结果
 s = Solution()
 print(s.letterCombinations('23'))
+'''
